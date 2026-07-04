@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown, ArrowRight, CalendarCheck, Heart, Mail, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowDown, ArrowRight, CalendarCheck, Heart, Mail, Sparkles } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { LinkButton } from "@/components/ui/button";
 import { Reveal } from "@/components/site/reveal";
@@ -84,37 +84,6 @@ export default function Home() {
               );
             })}
           </div>
-        </div>
-      </section>
-
-      <section className="section bg-white">
-        <div className="container grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-          <Reveal>
-            <div className="relative">
-              <div className="arch relative aspect-[0.82] overflow-hidden shadow-soft">
-                <Image src={assetPath("/images/ateliers-parenthese.png")} alt="Atelier parent-enfant Tendre Parenthèse" fill sizes="(min-width: 1024px) 44vw, 100vw" className="object-cover" />
-              </div>
-            </div>
-          </Reveal>
-          <Reveal delay={0.08}>
-            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-clay">Le concept</p>
-            <h2 className="mt-4 font-serif text-4xl leading-tight md:text-6xl">
-              Un endroit qui comprend les parents avant même qu'ils parlent.
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-ink/70">
-              Tendre Parenthèse réunit les moments qui manquent souvent dans une journée de parent:
-              boire un café chaud, laisser son enfant jouer en sécurité, réserver une garde courte,
-              rencontrer un professionnel, prendre soin de soi, repartir avec une attention.
-            </p>
-            <div className="mt-8 grid gap-3 sm:grid-cols-3">
-              {["Douceur", "Sécurité", "Confiance"].map((item) => (
-                <div key={item} className="rounded-[8px] bg-ivory p-5">
-                  <ShieldCheck className="mb-3 text-clay" size={22} />
-                  <p className="font-medium">{item}</p>
-                </div>
-              ))}
-            </div>
-          </Reveal>
         </div>
       </section>
 
