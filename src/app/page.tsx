@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card";
 import { LinkButton } from "@/components/ui/button";
 import { Reveal } from "@/components/site/reveal";
 import { assetPath } from "@/lib/assets";
-import { storyPillars, testimonials, universes, workshops } from "@/lib/site-data";
+import { testimonials, universes, workshops } from "@/lib/site-data";
 
 export default function Home() {
   return (
@@ -83,21 +83,6 @@ export default function Home() {
                 </Reveal>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      <section className="section grain overflow-hidden bg-sage/28">
-        <div className="container relative">
-          <div className="grid gap-4 md:grid-cols-4">
-            {storyPillars.map((pillar, index) => (
-              <Reveal key={pillar.label} delay={index * 0.05}>
-                <div className="rounded-[8px] border border-white/80 bg-white/72 p-8 text-center shadow-soft backdrop-blur">
-                  <strong className="font-serif text-5xl text-clay">{pillar.value}</strong>
-                  <p className="mt-3 text-sm uppercase tracking-[0.18em] text-ink/58">{pillar.label}</p>
-                </div>
-              </Reveal>
-            ))}
           </div>
         </div>
       </section>
