@@ -4,6 +4,7 @@ import { ArrowDown, ArrowRight, CalendarCheck, Heart, Mail, ShieldCheck, Sparkle
 import { Card } from "@/components/ui/card";
 import { LinkButton } from "@/components/ui/button";
 import { Reveal } from "@/components/site/reveal";
+import { assetPath } from "@/lib/assets";
 import { storyPillars, testimonials, universes, workshops } from "@/lib/site-data";
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
     <main>
       <section className="relative min-h-screen overflow-hidden px-4 pb-10 pt-28 md:px-6">
         <Image
-          src="/images/hero-parenthese.png"
+          src={assetPath("/images/hero-parenthese.png")}
           alt="Intérieur lumineux Tendre Parenthèse"
           fill
           priority
@@ -22,7 +23,7 @@ export default function Home() {
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ivory to-transparent" />
         <div className="container relative flex min-h-[calc(100vh-9rem)] items-center">
           <div className="max-w-3xl">
-            <Image src="/images/logo.jpg" alt="Tendre Parenthèse" width={238} height={94} className="mb-8 h-20 w-auto rounded-full object-cover shadow-soft" priority />
+            <Image src={assetPath("/images/logo.jpg")} alt="Tendre Parenthèse" width={238} height={94} className="mb-8 h-20 w-auto rounded-full object-cover shadow-soft" priority />
             <h1 className="font-serif text-5xl leading-[0.95] text-ink md:text-6xl lg:text-7xl">
               La pause que tous les parents méritent.
             </h1>
@@ -59,7 +60,7 @@ export default function Home() {
                     <Card className="h-full overflow-hidden p-4 transition duration-300 hover:-translate-y-1 hover:shadow-[0_30px_80px_rgba(68,58,54,0.16)]">
                       <div className="relative aspect-[1.35] overflow-hidden rounded-[8px]">
                         <Image
-                          src={universe.image}
+                          src={assetPath(universe.image)}
                           alt={universe.eyebrow}
                           fill
                           sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
@@ -91,7 +92,7 @@ export default function Home() {
           <Reveal>
             <div className="relative">
               <div className="arch relative aspect-[0.82] overflow-hidden shadow-soft">
-                <Image src="/images/ateliers-parenthese.png" alt="Atelier parent-enfant Tendre Parenthèse" fill sizes="(min-width: 1024px) 44vw, 100vw" className="object-cover" />
+                <Image src={assetPath("/images/ateliers-parenthese.png")} alt="Atelier parent-enfant Tendre Parenthèse" fill sizes="(min-width: 1024px) 44vw, 100vw" className="object-cover" />
               </div>
             </div>
           </Reveal>

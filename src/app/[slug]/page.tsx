@@ -5,6 +5,7 @@ import { ArrowRight, Clock, HelpCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { LinkButton } from "@/components/ui/button";
 import { Reveal } from "@/components/site/reveal";
+import { assetPath } from "@/lib/assets";
 import { cafeMenu, contactCards, legalPages, teamMembers, universes } from "@/lib/site-data";
 
 type PageProps = {
@@ -67,7 +68,7 @@ export default async function DynamicPage({ params }: PageProps) {
             </Reveal>
             <Reveal delay={0.08}>
               <div className="relative aspect-[1.05] overflow-hidden rounded-[8px] shadow-soft">
-                <Image src={universe.image} alt={universe.eyebrow} fill priority sizes="(min-width: 1024px) 52vw, 100vw" className="object-cover" />
+                <Image src={assetPath(universe.image)} alt={universe.eyebrow} fill priority sizes="(min-width: 1024px) 52vw, 100vw" className="object-cover" />
               </div>
             </Reveal>
           </div>
@@ -256,7 +257,7 @@ export default async function DynamicPage({ params }: PageProps) {
                   <Card className="h-full overflow-hidden">
                     <div className="relative aspect-[0.86]">
                       <Image
-                        src={member.image}
+                        src={assetPath(member.image)}
                         alt={`Portrait placeholder de ${member.name}`}
                         fill
                         sizes="(min-width: 768px) 33vw, 100vw"
@@ -316,7 +317,7 @@ export default async function DynamicPage({ params }: PageProps) {
             <Reveal delay={0.08}>
               <div className="relative aspect-[1.05] overflow-hidden rounded-[8px] shadow-soft">
                 <Image
-                  src="/images/location-anniversaire.png"
+                  src={assetPath("/images/location-anniversaire.png")}
                   alt="Salle décorée pour anniversaire, baptême ou baby shower"
                   fill
                   priority

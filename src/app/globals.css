@@ -82,8 +82,9 @@ a {
   position: absolute;
   inset: 0;
   opacity: 0.16;
-  background-image: url("/images/inspiration-clouds.webp");
-  background-size: cover;
+  background:
+    radial-gradient(circle at 18% 30%, rgba(255, 255, 255, 0.9), transparent 18rem),
+    radial-gradient(circle at 78% 64%, rgba(216, 171, 168, 0.32), transparent 16rem);
   mix-blend-mode: soft-light;
 }
 

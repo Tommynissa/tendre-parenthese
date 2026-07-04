@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { navItems } from "@/lib/site-data";
 import { Button, LinkButton } from "@/components/ui/button";
+import { assetPath } from "@/lib/assets";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -15,7 +16,7 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/80 bg-white/72 px-4 py-3 shadow-soft backdrop-blur-xl">
         <Link href="/" className="flex items-center gap-3" aria-label="Tendre Parenthèse">
           <Image
-            src="/images/logo.jpg"
+            src={assetPath("/images/logo.jpg")}
             alt="Tendre Parenthèse"
             width={136}
             height={54}

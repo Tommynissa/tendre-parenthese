@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Instagram, Mail, MapPin } from "lucide-react";
 import { navItems } from "@/lib/site-data";
 import { LinkButton } from "@/components/ui/button";
+import { assetPath } from "@/lib/assets";
 
 export function Footer() {
   return (
@@ -10,7 +11,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
         <div>
           <Image
-            src="/images/logo.jpg"
+            src={assetPath("/images/logo.jpg")}
             alt="Tendre Parenthèse"
             width={190}
             height={75}
