@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  --ivory: #fbf7ef;
+  --cream: #fffdf8;
+  --sand: #ead8c9;
+  --rose: #d9a3a8;
+  --rose-soft: #f5d6d8;
+  --sage: #b9cbbd;
+  --celadon: #b9d7d6;
+  --clay: #b98283;
+  --ink: #443a36;
+}
+
+@theme inline {
+  --color-ivory: var(--ivory);
+  --color-cream: var(--cream);
+  --color-sand: var(--sand);
+  --color-rose: var(--rose);
+  --color-rose-soft: var(--rose-soft);
+  --color-sage: var(--sage);
+  --color-celadon: var(--celadon);
+  --color-clay: var(--clay);
+  --color-ink: var(--ink);
+  --shadow-soft: 0 24px 70px rgba(68, 58, 54, 0.12);
+  --font-sans: "Avenir Next", Avenir, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(217, 163, 168, 0.24), transparent 34rem),
+    linear-gradient(180deg, var(--cream), var(--ivory) 42%, #ffffff);
+  color: var(--ink);
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--rose-soft);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.section {
+  padding: 6rem 1.5rem;
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+.arch {
+  border-radius: 999px 999px 8px 8px;
+}
+
+.soft-mask {
+  mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
+}
+
+.grain {
+  position: relative;
+}
+
+.grain::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.16;
+  background-image: url("/images/inspiration-clouds.webp");
+  background-size: cover;
+  mix-blend-mode: soft-light;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
